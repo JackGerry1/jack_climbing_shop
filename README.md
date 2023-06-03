@@ -6,15 +6,23 @@ This code repository contains PHP files for a user registration and login system
 
 The repository includes the following files:
 
-1. `register.php`: This file handles user registration. It validates user inputs, generates a salted hash of the password, and inserts the user's data into the database.
+1. `welcome.php`: This file is responsible for displaying a welcome message to logged-in users. It includes search forms to search for products based on user input. The file connects to the database, retrieves user information, and performs search queries. It also handles logout functionality.
 
-2. `login.php`: This file handles user login. It verifies the user's entered password against the stored salted hash in the database and sets session variables for authenticated users.
+2. `purchase.php`: This file handles the purchase of products by logged-in users. It interacts with the database to update product stock and record the purchase details. It sanitizes user input to prevent SQL injection.
 
-3. `logout.php`: This file handles user logout. It destroys the session and redirects the user to the login page.
+3. `script.js`: This JavaScript file enhances the functionality of the search form in `welcome.php`. It sets up and updates a price range slider, allowing users to select a price range for product searches. It also updates the hidden input values based on the slider's position.
 
-4. `templates/config.php`: This file contains the configuration settings for connecting to the MySQL database. Modify this file with your own database credentials.
+4. `register.php`: This file handles user registration. It validates user inputs, generates a salted hash of the password, and inserts the user's data into the database.
 
-5. `templates/header.php` and `templates/footer.php`: These files are included in `register.php` and `login.php` to provide a common header and footer for the pages.
+5. `login.php`: This file handles user login. It verifies the user's entered password against the stored salted hash in the database and sets session variables for authenticated users.
+
+6. `logout.php`: This file handles user logout. It destroys the session and redirects the user to the login page.
+
+7. `templates/config.php`: This file contains the configuration settings for connecting to the MySQL database. It should be modified with the appropriate database credentials before use.
+
+8. `templates/header.php` and `templates/footer.php`: These files are included in `register.php` and `login.php` to provide a common header and footer for the pages, ensuring consistent styling and structure.
+
+Please refer to the individual file descriptions for more details on their functionality and usage.
 
 ## References
 
@@ -24,8 +32,7 @@ The code includes references to external resources for specific functions or con
 - [PHP: mysqli::real_escape_string - Manual](https://www.php.net/manual/en/mysqli.real-escape-string.php): Reference for the `mysqli_real_escape_string` function used to prevent SQL injection in user input.
 - [PHP Login with Sessions and MySQL: the Complete Tutorial](https://alexwebdevelop.com/user-authentication/#security): Tutorial covering user authentication and login process.
 - [PHP Password Hashing tutorial (with examples)](https://alexwebdevelop.com/php-password-hashing/): Tutorial explaining password hashing and verification in PHP.
-
-Note: The line ranges mentioned in the references correspond to the referenced code sections within the PHP files.
+- [Jquery User Interface: Slider](https://jqueryui.com/slider/#range) - Reference for implementing a slider using jQuery UI.
 
 ## welcome.php
 
@@ -64,7 +71,6 @@ This file contains JavaScript code that provides functionality for the price ran
   - Sets up a price range slider with default values.
   - Updates the slider values and positions as the user interacts with them.
   - Updates hidden inputs with the current slider values.
-
 
 ## Usage
 
