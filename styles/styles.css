@@ -1,0 +1,144 @@
+/* General Styling For Webpage */
+html,
+body {
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: 0;
+    padding: 0;
+}
+/* End Of General Styling For Webpage */
+
+/* Styling For Main Container */
+.main-content {
+    overflow: auto;
+    width: 100%;
+    margin-top: 1%;
+    margin-bottom: 2%;
+    margin-left: 0.5%;
+    min-height: 100%;
+}
+/* End Of Main Container Styling */
+/* Header And Footer Styling */
+header {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: #24252a;
+    text-align: center;
+    color: #ffffff;
+}
+footer {
+    position: relative;
+    margin: -20px 0;
+    padding: 20px 0;
+    background-color: #24252a;
+    text-align: center;
+    color: #ffffff;
+}
+/* End Of Header And Footer Styling */
+/* Table Styling For The Products Table And Purchase Product Input */
+table {
+    border-collapse: collapse;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+}
+
+table td,
+table th {
+    background-color: #f2f2f2;
+    color: black;
+    padding: 10px;
+    border: 1px solid black;
+}
+input[type="number"] {
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* End Of Table Styling For The Products Table And Purchase Product Input */
+
+/* Styling For Price Range Slider, Min And Max Labels. */
+.price-range {
+    width: 500px;
+    position: relative;
+    margin: 40px 0 50px 10px;
+}
+
+#price-range-slider {
+    height: 10px;
+    border-radius: 5px;
+    background-color: #ddd;
+    margin: 15px 0;
+}
+
+.ui-slider-range,
+.ui-slider-handle,
+.ui-slider-handle:before {
+    background-color: #0099ff;
+}
+
+.ui-slider-range {
+    height: 100%;
+}
+
+.ui-slider-handle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: none;
+    position: absolute;
+    top: -5px;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.ui-slider-handle:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.3;
+    border-radius: 50%;
+}
+
+.range-values {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: -30px;
+    width: 100%;
+    text-align: center;
+}
+
+.range-values .min-value,
+.range-values .max-value {
+    position: absolute;
+    transform: translateX(-50%);
+}
+
+.range-values .min-value {
+    left: 0;
+}
+
+.range-values .max-value {
+    right: 0;
+}
+.min-label {
+    position: absolute;
+    top: 25px;
+    left: 0;
+}
+
+.max-label {
+    position: absolute;
+    top: 25px;
+    right: 0;
+}
+/* End Of Styling For Price Range Slider, Min And Max Labels. */
