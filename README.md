@@ -24,7 +24,7 @@ The repository includes the following files:
 
 Please refer to the individual file descriptions for more details on their functionality and usage.
 
-## References
+## References:
 
 The code includes references to external resources for specific functions or concepts. These references provide additional information and context for the code implementation. Please refer to the following references for more details:
 
@@ -33,6 +33,50 @@ The code includes references to external resources for specific functions or con
 - [PHP Login with Sessions and MySQL: the Complete Tutorial](https://alexwebdevelop.com/user-authentication/#security): Tutorial covering user authentication and login process.
 - [PHP Password Hashing tutorial (with examples)](https://alexwebdevelop.com/php-password-hashing/): Tutorial explaining password hashing and verification in PHP.
 - [Jquery User Interface: Slider](https://jqueryui.com/slider/#range) - Reference for implementing a slider using jQuery UI.
+
+## register.php
+
+This file handles user registration. It validates user inputs, generates a salted hash of the password, and inserts the user's data into the database.
+- **References:**
+  - [PHP: mysqli::real_escape_string - Manual](https://www.php.net/manual/en/mysqli.real-escape-string.php) - Reference for using mysqli_real_escape_string() function to prevent SQL injection.
+
+- **Code Purpose:**
+   - Validates user input to ensure data integrity.
+   - Generates a salted hash of the password for secure storage.
+   - Inserts user data into the database.
+
+## login.php
+
+This file handles user login. It verifies the user's entered password against the stored salted hash in the database and sets session variables for authenticated users.
+
+- **References:**
+
+   - [PHP: mysqli::real_escape_string - Manual](https://www.php.net/manual/en/mysqli.real-escape-string.php) - Reference for using mysqli_real_escape_string() function to prevent SQL injection.
+
+- **Code Purpose:**
+   - Validates user input to ensure data integrity.
+   - Retrieves stored salted hash of the password from the database.
+   - Verifies the entered password against the stored hash.
+   - Sets session variables for authenticated users.
+
+## logout.php
+
+This file handles user logout. It destroys the session and redirects the user to the login page.
+
+- **Code Purpose:**
+
+    - Destroys the current session to log out the user.
+    - Redirects the user to the login page for reauthentication.
+
+## header.php and footer.php
+
+These files are included in other PHP files, such as register.php and login.php, to provide a common header and footer for the pages, ensuring consistent styling and structure.
+
+- **Code Purpose:**
+
+   - Provides a common header and footer for PHP files.
+   - Ensures consistent styling and structure across pages.
+
 
 ## welcome.php
 
